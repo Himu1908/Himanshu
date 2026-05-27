@@ -2,6 +2,7 @@ terraform {
   backend "s3" {
     region = "ap-south-1"
     bucket = "terraform-bucket122"
+    key = "tfstate"
     
   }
 }
