@@ -1,6 +1,16 @@
+terraform {
+  backend "s3" {
+    region = "ap-south-1"
+    bucket = "terraform-bucket122"
+    
+  }
+}
+
+
+
+
 provider "aws" {
   region     = "ap-south-1"
-
 
 }
 resource "aws_instance" "myec2" {
