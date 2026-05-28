@@ -19,14 +19,12 @@ variable "instance_type" {
   default = "t3.micro"
 }
 variable "key_name" {
-  default = "id_rsa"
+  default = "himanshu.pem"
 }
 variable "mysg" {
   default = "sg-023f8acb731b649a6"
 }
-variable "instance-name1" {
-  default = "myec2"
-}
+
 variable "instance_name1" {
   default = "myec2"
 }
