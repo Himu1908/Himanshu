@@ -19,7 +19,7 @@ variable "instance_type" {
   default = "t3.micro"
 }
 variable "key_name" {
-  default = "himanshu.pem"
+  default = "himanshu.key"
 }
 variable "mysg" {
   default = "sg-023f8acb731b649a6"
