@@ -13,7 +13,7 @@ variable "pvt-sub-cidr" {
 }
 
 variable "ami" {
-  default = "ami-091138d0f0d41ff90"
+  default = "ami-0388e3ada3d9812da"
 }
 variable "instance_type" {
   default = "t3.micro"
