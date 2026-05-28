@@ -3,7 +3,7 @@ terraform {
     bucket         = "terraform-bucket122"
     region         = "ap-south-1"
     key            = "tfstate"
-      dynamodb_table = "terraform-lock"
+      dynamodb_table =  "use_lockfile"
   }
 }
 provider "aws" {
