@@ -27,3 +27,6 @@ variable "mysg" {
 variable "instance-name1" {
   default = "myec2"
 }
+variable "instance_name1" {
+  default = "myec2"
+}

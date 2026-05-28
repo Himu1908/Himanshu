@@ -51,13 +51,6 @@ resource "aws_instance" "myec2" {
   }
 }
 
-// Added missing variable declaration for instance_name1
-variable "instance_name1" {
-    description = "Name tag for the EC2 instance"
-    type        = string
-    default     = "my-ec2-instance"
-}
-
 variable "vpc_cidr" {
     description = "CIDR block for the VPC"
     type        = string
