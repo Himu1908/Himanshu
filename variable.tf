@@ -16,7 +16,7 @@ variable "key_name" {
     default = "himanshu.key"
 }
 variable "mysg" {
-    default = ["sg-023f8acb731b649a6"]
+    default = "sg-023f8acb731b649a6"
   
 }
 variable "instance-name" {
