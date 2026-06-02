@@ -1,0 +1,6 @@
+- name: This is my 1st playbook
+  hosts: all
+  tasks:
+    - name: This is my 1st task
+      debug:
+        msg: " my 1st task done successfully"
