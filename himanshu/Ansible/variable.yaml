@@ -3,6 +3,8 @@
   hosts: all
   vars:
     animal : "tiger"
+  vars_files:
+    - ./var.txt
   tasks:
     - name: print animal 1 
       debug:
