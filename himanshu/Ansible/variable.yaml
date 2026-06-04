@@ -3,8 +3,8 @@
   hosts: all
   vars:
     animal : "tiger"
-  vars_files:
-    - ./var.txt
+ # vars_files:
+  #  - ./var.txt
   vars_prompt:
     - name: animal
       prompt: Enter the name of animal
