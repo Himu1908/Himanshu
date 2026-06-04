@@ -5,6 +5,10 @@
     animal : "tiger"
   vars_files:
     - ./var.txt
+  vars_prompt:
+    - name: animal
+      prompt: Enter the name of animal
+    
   tasks:
     - name: print animal 1 
       debug:
