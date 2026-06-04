@@ -8,6 +8,6 @@
         state: latest
 
     - name: install httpd
-      yum:
+      dnf:
         name: httpd
         state: latest
