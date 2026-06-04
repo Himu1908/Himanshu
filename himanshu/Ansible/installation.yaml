@@ -1,0 +1,12 @@
+- name: installation playbook
+  hosts: all
+  tasks:
+    - name: install apache2
+      apt:
+        name: apache2
+        state: latest
+
+    - name: install httpd
+      yum:
+        name: httpd
+        state: latest
