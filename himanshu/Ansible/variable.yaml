@@ -3,7 +3,7 @@
   hosts: all
   vars:
     animal : "tiger"
-  task:
+  tasks:
     - name: print animal 1 
       debug:
         msg: "this is {{animal}}"
@@ -15,4 +15,5 @@
       debug:
         msg: "this is {{animal}}"
       vars:
-        animal : "lion" 
+        animal : "lion"                   
+                 
