@@ -1,0 +1,18 @@
+- name: this is variable playbook
+  
+  hosts: all
+  vars:
+    animal : "tiger"
+  task:
+    - name: print animal 1 
+      debug:
+        msg: "this is {{animal}}"
+    - name: print animal 2
+      debug:
+        msg: "this is {{animal}}"
+    
+    - name: print animal 3
+      debug:
+        msg: "this is {{animal}}"
+      vars:
+        animal : "lion" 
