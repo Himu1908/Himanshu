@@ -1,0 +1,16 @@
+- name: update webserver page 
+  hosts: all
+  become: true
+  tasks:
+    - name: update index.html
+      copy:
+        src: index.html
+        dest: /var/www/html/index.html
+      when: ansible_os_family == "Debian"
+    - name: restart apache2
+      systemd:
+        name: apache2
+        state: restarted
+        enabled: true
+      when: ansible_os_family == "Debian"
+      
