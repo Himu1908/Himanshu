@@ -13,4 +13,7 @@
         state: restarted
         enabled: true
       when: ansible_os_family == "Debian"
-      
+    - name: add new line
+      lineinfile:
+        regexp: '^<h1>'
+        line: '<h1>Welcome to my Cloud!!!!!!</h1>'
