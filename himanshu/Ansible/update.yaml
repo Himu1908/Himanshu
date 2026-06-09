@@ -1,22 +1,25 @@
-- name: update webserver page 
+---
+- name: update webserver page
   hosts: all
   become: true
+
   tasks:
     - name: update index.html
       copy:
         src: index.html
         dest: /var/www/html/index.html
       when: ansible_os_family == "Debian"
-   
-    - name: restart apache2
-      systemd:
-        name: apache2
-        state: restarted
-        enabled: true
-      when: ansible_os_family == "Debian"
+
     - name: add new line
       lineinfile:
         path: /var/www/html/index.html
         regexp: '^<h1>'
         line: '<h1>Welcome to my Cloud!!!!!!</h1>'
+      when: ansible_os_family == "Debian"
+
+    - name: restart apache2
+      systemd:
+        name: apache2
+        state: restarted
+        enabled: true
       when: ansible_os_family == "Debian"
