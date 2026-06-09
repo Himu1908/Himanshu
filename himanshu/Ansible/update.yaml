@@ -7,17 +7,16 @@
         src: index.html
         dest: /var/www/html/index.html
       when: ansible_os_family == "Debian"
-    - name: add new line
-      lineinfile:
-        regexp: '^<h1>'
-        line: '<h1>Welcome to my Cloud!!!!!!</h1>'
-        dest: /var/www/html/index.html
-      when: ansible_os_family == "Debian"
-
+   
     - name: restart apache2
       systemd:
         name: apache2
         state: restarted
         enabled: true
       when: ansible_os_family == "Debian"
-   
+    - name: add new line
+      lineinfile:
+        regexp: '^<h1>'
+        line: '<h1>Welcome to my Cloud!!!!!!</h1>'
+        dest: /var/www/html/index.html
+      when: ansible_os_family == "Debian"
