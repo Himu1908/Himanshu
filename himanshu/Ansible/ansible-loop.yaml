@@ -1,21 +1,21 @@
 - name : loop for automating multiple tasks 
   hosts: all 
   tasks: 
-    - name: pring list 
-      debug:
+  - name: print list 
+    debug:
         msg: "{{item}}"
-      loop:
+    loop:
         -apple
         -banana
         -grapes 
-    - name: install vim,wget, httpd 
-      package:
-       name:"{{item}}"
+  - name: install vim,wget, httpd 
+    package:
+      name: "{{item}}"
       state: latest
-      loop:
-        -vim
-        -wget
-        -httpd
-        -apache2
+    loop:
+      - vim
+      - wget
+      - httpd
+      - apache2
 
 
