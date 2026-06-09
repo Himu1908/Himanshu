@@ -5,9 +5,9 @@
     debug:
         msg: "{{item}}"
     loop:
-        -apple
-        -banana
-        -grapes 
+        - apple
+        - banana
+        - grapes 
   - name: install vim,wget, httpd 
     package:
       name: "{{item}}"
