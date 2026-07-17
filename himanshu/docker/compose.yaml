@@ -1,0 +1,29 @@
+services:
+  tomcat-server:
+    build: .
+    ports:
+      - 8080:8080
+  http-server:
+    image: himanshu1908/docker:httpd-v1
+    environment:
+      - name=suraj
+      - department=devops
+    ports:
+      - 80:80
+  apache-server:
+    image: himanshu1908/docker:apache2
+    networks:
+      - mywork
+      - devnetwowrk
+    ports:
+      - 81:80
+    volumes:
+      - /opt/data 
+  mariadb-server:
+    image: mariadb
+    environment:
+      - MMARIADB_ROOT_PASSWORD=admin123
+  # depends_on:
+  #   apache-server:
+  #     condition: service_healthy
+  
