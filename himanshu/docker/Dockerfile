@@ -17,14 +17,14 @@ ENV TOMCAT_VERSION=11.0.24
 WORKDIR /tmp
 
 RUN apk add --no-cache curl tar && \
-    curl -O https://downloads.apache.org/tomcat/tomcat-9/v${TOMCAT_VERSION}/bin/apache-tomcat-${TOMCAT_VERSION}.tar.gz && \
+    curl -O https://downloads.apache.org/tomcat/tomcat-11/v${TOMCAT_VERSION}/bin/apache-tomcat-${TOMCAT_VERSION}.tar.gz && \
     tar -xzf apache-tomcat-${TOMCAT_VERSION}.tar.gz
 
 
 
 
 # --- Stage 2: Final image ---
-FROM openjdk:17-jdk-slim
+FROM eclipse-temurin:17-jdk
 
 ENV CATALINA_HOME=/opt/tomcat
 ENV PATH=$CATALINA_HOME/bin:$PATH
