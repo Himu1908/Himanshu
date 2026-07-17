@@ -11,7 +11,7 @@
 
 #multistage dockerfile
 #--- Stage 1: Download and extract Tomcat ---
-FROM alpine:3.24.1 as downloader
+FROM alpine:3.24.1 AS downloader
 
 ENV TOMCAT_VERSION=11.0.24
 WORKDIR /tmp
