@@ -11,9 +11,9 @@
 
 #multistage dockerfile
 #--- Stage 1: Download and extract Tomcat ---
-FROM alpine:3.20 as downloader
+FROM alpine:3.24.1 as downloader
 
-ENV TOMCAT_VERSION=9.0.107
+ENV TOMCAT_VERSION=11.0.24
 WORKDIR /tmp
 
 RUN apk add --no-cache curl tar && \
@@ -22,7 +22,7 @@ RUN apk add --no-cache curl tar && \
 
 
 
-    
+
 # --- Stage 2: Final image ---
 FROM openjdk:17-jdk-slim
 
