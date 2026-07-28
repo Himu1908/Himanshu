@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: myapp
+  labels:
+    app: my1stapp 
+spec:
+  containers:
+  - name: myapp
+    image: himanshu1908/docker:httpd-v1
+    resources:
+      limits:
+        memory: "128Mi"
+        cpu: "500m"
+      requests:
+        memory: "64Mi"
+        cpu: "250m"
+    ports:
+    - containerPort: 80 
